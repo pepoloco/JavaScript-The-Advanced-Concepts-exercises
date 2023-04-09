@@ -94,3 +94,53 @@ function strInt(input) {
 }
 
 strInt(solveResult);
+
+/*function solve(input) {
+  let sortedArr = {};
+  input.forEach((num) => {
+    if (sortedArr[num]) {
+      sortedArr[num].push(num);
+    } else {
+      sortedArr[num] = [num];
+    }
+  });
+  console.log(sortedArr);
+  return sortedArr;
+}
+const solved = solve([
+  1,
+  2,
+  4,
+  "591",
+  392,
+  391,
+  2,
+  5,
+  "10",
+  2,
+  1,
+  1,
+  1,
+  "20",
+  20,
+]);
+
+function sorting(input) {
+  const stringArr = [];
+  const intArr = [];
+
+  Object.values(input).forEach((element) => {
+    element.forEach((num) => {
+      if (typeof num === "string") {
+        stringArr.push(num);
+      }
+      if (typeof num === "number") {
+        intArr.push(num);
+      }
+    });
+  });
+  console.log(stringArr, intArr);
+  return stringArr, intArr;
+}
+sorting(solved);
+
